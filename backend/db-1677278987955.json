@@ -1,25 +1,19 @@
 {
-  "products": [
+  "Alunos": [
     {
       "id": 1,
-      "caneta": "caneta BIC preta",
-      "price": 5.59
+      "name": "Cassio Moreiar",
+      "curso": "Java O O"
     },
     {
       "id": 2,
-      "caneta": "notebook Mac Pro",
-      "price": 12000
+      "name": "Moreira de Souza",
+      "curso": "Java O O"
     },
     {
       "id": 3,
-      "caneta": "Samsung S20+",
-      "price": 5000
-    },
-    {
-      "nome": "geladeira",
-      "preco": "",
-      "": "1200.00",
-      "id": 4
+      "name": "Cassio de Souza",
+      "curso": "Java O O"
     }
   ]
 }
