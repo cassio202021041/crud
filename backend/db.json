@@ -1,24 +1,19 @@
 {
-  "products": [
+  "Alunos": [
     {
       "id": 1,
-      "name": "Caneta BIC Preta",
-      "price": 5.89
+      "name": "Cassio Moreira de Souza",
+      "curso": "Java O O"
     },
     {
-      "id": 2,
-      "name": "Notebook Mac Pro",
-      "price": 12000.89
+      "name": "Cassio Moreira de Souza",
+      "curso": "JAVA SCRIPT",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Sansung S20+ plus Ultra",
-      "price": "7520.89"
-    },
-    {
-      "name": "Lapis Preto Básico",
-      "price": "1.50",
-      "id": 4
+      "name": "cassio moreira de souza",
+      "curso": "Java",
+      "id": 3
     }
   ]
 }
