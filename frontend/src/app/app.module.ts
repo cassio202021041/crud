@@ -13,26 +13,44 @@ import { MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
-import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
-import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule }from '@angular/material/form-field';
 import { MatInputModule  }from '@angular/material/input';
-import { ProductReadComponent } from './components/product/product-read/product-read.component';
-import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { AlunoReadComponent } from './components/aluno/aluno-read/aluno-read.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
 import lacalePt from '@angular/common/locales/pt'; //local e data portugues
 import { registerLocaleData } from '@angular/common';
-import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component'; //local e data e separador em portugues
+import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
+import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { loginComponent } from './components/admin/login/login/login.component'; //local e data e separador em portugues
+import { RouterModule } from '@angular/router';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+
+
+
+export const firebase = {
+  apiKey: "AIzaSyAC7LozKjhgtSrnAcNlmCVFFFiXesq4m-4",
+  authDomain: "projetointegradocassio.firebaseapp.com",
+  databaseURL: "https://projetointegradocassio-default-rtdb.firebaseio.com",
+  projectId: "projetointegradocassio",
+  storageBucket: "projetointegradocassio.appspot.com",
+  messagingSenderId: "830035014062",
+  appId: "1:830035014062:web:d1998f407fbd75ea84183f"
+};
+
 
 registerLocaleData(lacalePt)
 
@@ -43,14 +61,16 @@ registerLocaleData(lacalePt)
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ProductCrudComponent,
+    AlunoCrudComponent,
     RedDirective,
     ForDirective,
-    ProductCreateComponent,
-    ProductReadComponent,
-    ProductRead2Component,
-    ProductUpdateComponent,
-    ProductDeleteComponent
+    AlunoCreateComponent,
+    AlunoReadComponent,
+    AlunoUpdateComponent,
+    AlunoDeleteComponent,
+    AdminComponent,
+    loginComponent
+
   ],
   imports: [
     BrowserModule,
@@ -68,8 +88,13 @@ registerLocaleData(lacalePt)
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
-
+    MatSortModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    RouterModule,
+    BrowserModule,
+    provideFirebaseApp(() => initializeApp({})),
+    provideFirestore(() => getFirestore())
   ],
   providers: [{
     provide:LOCALE_ID, //local e data em portugues 

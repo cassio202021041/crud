@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Excluir Aluno</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [value]="aluno.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="curso"
+                [value]="aluno.curso" name="curso" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteAluno()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+  </mat-card>

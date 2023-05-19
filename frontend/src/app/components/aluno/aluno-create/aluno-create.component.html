@@ -1,0 +1,25 @@
+<mat-card>
+    
+        <mat-card-title>
+            Novo Aluno
+        </mat-card-title> 
+        <form>
+          <mat-form-field> <h1>Nome</h1>
+            <input matInput placeholder="Nome" 
+            [(ngModel)]="aluno.name" name="name">
+          </mat-form-field>
+          <mat-form-field> <h1>Curso</h1>
+            <input matInput placeholder="Curso"
+            [(ngModel)]="aluno.curso" name="curso">
+          </mat-form-field>
+        </form>
+<button mat-raised-button (click)="createAluno()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
+
+</mat-card>
+

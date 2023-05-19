@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Alterar Aluno</mat-card-title>
+  <form>
+      <mat-form-field>
+        <h1 class="h1">Aluno</h1>
+          <input matInput placeholder="Nome"
+              [(ngModel)]="aluno.name" name="name">
+      </mat-form-field>
+      <mat-form-field>
+        <h1>Curso</h1>
+          <input matInput placeholder="Curso"
+              [(ngModel)]="aluno.curso" name="curso">
+      </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="updateAluno()" color="primary">
+      Atualizar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()">
+      Cancelar
+  </button>
+</mat-card>

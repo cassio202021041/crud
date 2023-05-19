@@ -1,10 +1,13 @@
-import { ProductCreateComponent } from './components/product/product-create/product-create.component';
-import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
+import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { HomeComponent } from './views/home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
+import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { loginComponent } from './components/admin/login/login/login.component';
+
 
 const routes: Routes = [
   {
@@ -12,21 +15,31 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "products",
-    component: ProductCrudComponent
+    path: "alunos",
+    component: AlunoCrudComponent
   },
   {
-    path: "products/create",
-    component: ProductCreateComponent
+    path: "alunos/create",
+    component: AlunoCreateComponent
   },
   {
-    path: "products/update/:id",
-    component: ProductUpdateComponent
+    path: "alunos/update/:id",
+    component: AlunoUpdateComponent
   },
   {
-    path: "products/delete/:id",
-    component: ProductDeleteComponent
+    path: "alunos/delete/:id",
+    component: AlunoDeleteComponent
+  },
+  {
+    path:"admin",
+    component: loginComponent
+  },
+  {
+    path:"pass",
+    component: AdminComponent
   }
+  
+
 ];
 
 @NgModule({

@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "projetointegradocassio",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "database": {
+    "rules": "db.json"
+  }
+}
